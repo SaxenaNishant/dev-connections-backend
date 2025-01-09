@@ -26,6 +26,10 @@ app.use("/api/v1", profileRouter);
 app.use("/api/v1", requestsRouter);
 app.use("/api/v1", userRouter);
 
+app.use("/health-check", (req, res)=>{
+  res.status(200).send("System is up!!!")
+})
+
 connectDb()
   .then(() => {
     console.log("Mongodb connected successfully!!");
