@@ -30,7 +30,7 @@ connectDb()
   .then(() => {
     console.log("Mongodb connected successfully!!");
     app.listen(8000, () =>
-      console.log("App is listening on port 7777")
+      console.log("App is listening on port 8000")
     ); //process.env.PORT
   })
   .catch((err) => {
