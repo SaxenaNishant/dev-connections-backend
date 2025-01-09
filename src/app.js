@@ -29,9 +29,9 @@ app.use("/api/v1", userRouter);
 connectDb()
   .then(() => {
     console.log("Mongodb connected successfully!!");
-    app.listen(process.env.PORT, () =>
+    app.listen(8000, () =>
       console.log("App is listening on port 7777")
-    );
+    ); //process.env.PORT
   })
   .catch((err) => {
     console.log(

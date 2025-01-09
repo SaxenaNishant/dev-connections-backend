@@ -80,7 +80,7 @@ userSchema.methods.getJWT = function () {
     {
       id: this?._id,
     },
-    process.env.TOKEN_SECRET,
+    "myauthnextjsapp", //process.env.TOKEN_SECRET,
     { expiresIn: "1d" }
   );
   return token;

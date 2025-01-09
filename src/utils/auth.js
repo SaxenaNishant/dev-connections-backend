@@ -11,7 +11,7 @@ const userAuth = async (req, res, next) => {
         .json({ messgae: "Unathorised, you're not logged in !!" });
     }
 
-    const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET);
+    const decodedToken = jwt.verify(token, "myauthnextjsapp")//process.env.TOKEN_SECRET
     const { id } = decodedToken;
 
     const user = await User.findById(id);
