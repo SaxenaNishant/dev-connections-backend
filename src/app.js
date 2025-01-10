@@ -21,10 +21,10 @@ app.use(
   })
 );
 
-app.use("/api/v1", authRouter);
-app.use("/api/v1", profileRouter);
-app.use("/api/v1", requestsRouter);
-app.use("/api/v1", userRouter);
+app.use("/", authRouter);
+app.use("/", profileRouter);
+app.use("/", requestsRouter);
+app.use("/", userRouter);
 
 app.use("/health-check", (req, res)=>{
   res.status(200).send("System is up!!!")
